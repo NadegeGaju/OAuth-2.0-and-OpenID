@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Test</title>
+</head>
+<body>
+<form action="/submit" method="post">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+    <input type="text" name="testField" placeholder="Test Field">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
